@@ -295,10 +295,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var leadingZero = ""
         var leadingZeroMin = ""
         
-        seconds += 1
-        if seconds == 60 {
-            minutes += 1
-            seconds = 0
+        if counter < totalLaps {
+            seconds += 1
+            if seconds == 60 {
+                minutes += 1
+                seconds = 0
+            }
         }
         
         if minutes  / 60 <= 9 { leadingZeroMin = "0" } else { leadingZeroMin = "" }
